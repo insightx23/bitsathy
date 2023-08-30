@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Preview About</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Russo One", sans-serif;
+      }
+      .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .background-container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+      }
+      .bg-1 {
+        flex: 1;
+        background-color: #040548;
+      }
+      .bg-2 {
+        flex: 1;
+        background-color: #cb176e;
+      }
+      .about-container {
+        width: 85%;
+        min-height: 80vh;
+        position: absolute;
+        background-color: #faf3f7;
+        box-shadow: 24px 24px 30px #6d8dad;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 40px;
+        border-radius: 5px;
+        opacity: 0; /* Initially hide the container */
+        animation: fadeIn 1s ease forwards;
+      }
+      .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image-container img {
+        width: 300px;
+        height: 250px;
+        margin: 20px;
+        border-radius: 10px;
+      }
+      .text-container {
+        flex: 1;
+        margin-left: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 22px;
+      }
+
+      .contact-details {
+        margin-bottom: 2rem;
+      }
+
+      .contact-details p {
+        color: #cb176e;
+        font-size: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #040548;
+      }
+
+      .text-container h1 {
+        color: #cb176e;
+        font-family: "Raleway", sans-serif;
+        font-size: 30px;
+        padding: 20px 0px;
+      }
+      .text-container p {
+        font-family: "Raleway", sans-serif;
+      }
+
+      .loc {
+        width: "200";
+        height: "150";
+        margin-top: 1rem;
+      }
+      @media screen and (max-width: 1600px) {
+        .about-container {
+          width: 90%;
+        }
+        .image-container img {
+          width: 300px;
+          height: 250px;
+        }
+        .text-container h1 {
+          font-size: 30px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .about-container {
+          flex-direction: column;
+        }
+        .image-container img {
+          width: 300px;
+          height: 200px;
+        }
+        .text-container {
+          align-items: center;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px); /* Start slightly below and fade in */
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="background-container">
+        <div class="bg-1"></div>
+        <div class="bg-2"></div>
+      </div>
+      <div class="about-container">
+        <div class="image-container">
+          <img src="bit.png" alt="" />
+        </div>
+
+        <div class="text-container">
+          <h1>Contact us</h1>
+          <div class="contact-details">
+            <p>Email: <a href="mailto:insightx@bitsathy.ac.in">insightx@bitsathy.ac.in</a></p>
+            <p>Phone: <a href="tel:+1234567890">123-456-7890</a></p>
+            <iframe
+              class="loc"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.762935244095!2d77.27452747520137!3d11.497017845488882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9215d6d1b28f9%3A0xf48946a7dfcfeb1a!2sBannari%20Amman%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1692247668977!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
